@@ -9,11 +9,12 @@
 ![stdlib only](https://img.shields.io/badge/deps-stdlib%20only-00BCD4?style=for-the-badge)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-D97706?style=for-the-badge)
 ![Codex CLI](https://img.shields.io/badge/Codex%20CLI-Compatible-00897B?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/seedance-forge?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)
 
 **A portable Agent Skill packaging 2,366 real-world Seedance 2.0 video-generation prompts.**  
 Structural patterns. Authored exemplars. Source attribution. Zero dependencies.
 
-[Install](#install) · [Invoke](#invoke-the-skill) · [Search](#search-the-corpus) · [Examples](#example-output) · [Structure](#folder-structure)
+[Install](#install) · [Invoke](#invoke-the-skill) · [Search](#search-the-corpus) · [Examples](#example-output) · [Structure](#folder-structure) · [Registries](#add-to-skill-registries)
 
 </div>
 
@@ -72,6 +73,24 @@ New-Item -ItemType SymbolicLink `
 
 > **Windows symlink note:** Requires elevated PowerShell **or** Developer Mode on  
 > `Settings → Privacy & security → For developers → Developer Mode = On`
+
+### Option D — npm / npx (no git clone required)
+
+> Requires Node.js 14+. Works on Windows, macOS, Linux.
+
+```bash
+npx seedance-forge
+```
+
+Installs into `~/.claude/skills/seedance-forge` and `~/.codex/skills/seedance-forge` automatically.  
+Re-run anytime to update to the latest version.
+
+Or install globally so it's always on `$PATH`:
+
+```bash
+npm install -g seedance-forge
+seedance-forge   # run installer
+```
 
 ### Verify
 
@@ -241,6 +260,50 @@ The skill auto-activates in Claude Code on any of:
 - ❌ Work for Sora / Runway / Veo / Kling (different platform conventions)
 - ❌ Work for image generation (Midjourney, DALL-E, Flux)
 - ❌ Require any `pip install`
+
+---
+
+## Add to Skill Registries
+
+Want to list Seedance Forge in a community registry so others can discover it? Here are the active channels:
+
+### npm Registry (already live)
+
+```bash
+npx seedance-forge
+```
+
+Package page: [npmjs.com/package/seedance-forge](https://www.npmjs.com/package/seedance-forge)
+
+---
+
+### oh-my-claudecode Community Plugins
+
+oh-my-claudecode maintains a community plugin list. To submit:
+
+1. Fork → [github.com/BeehiveInnovations/oh-my-claudecode](https://github.com/BeehiveInnovations/oh-my-claudecode)
+2. Edit `PLUGINS.md` (or `plugins/registry.json` if it exists) — add an entry:
+   ```
+   | seedance-forge | Seedance 2.0 video-generation prompt skill (2,366-corpus) | https://github.com/StreetJammer/seedance-forge |
+   ```
+3. Open a PR titled `Add seedance-forge to community plugins`
+
+Install command others can use once listed:
+```bash
+# clone into skills dir directly
+git clone https://github.com/StreetJammer/seedance-forge \
+  ~/.claude/skills/seedance-forge
+```
+
+---
+
+### Claude Code Skills Marketplace
+
+Anthropic does not currently maintain an official skills marketplace, but community lists are tracked in the Claude Code GitHub Discussions:
+
+> [github.com/anthropics/claude-code/discussions](https://github.com/anthropics/claude-code/discussions)
+
+Post under **Show and tell** with title `[Skill] Seedance Forge — 2,366 Seedance 2.0 prompts`.
 
 ---
 
