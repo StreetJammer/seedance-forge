@@ -1,5 +1,5 @@
 {
-  "name": "@streetjammer/seedance-forge",
+  "name": "seedance-forge",
   "version": "1.0.0",
   "description": "Seedance Forge — Claude Code / Codex CLI skill for Seedance 2.0 video-generation prompts (2,366-row corpus)",
   "bin": {
